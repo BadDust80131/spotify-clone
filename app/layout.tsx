@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar";
 
 const font = Figtree({ subsets: ["latin"] });
 
@@ -31,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${font.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Sidebar>{children}</Sidebar>
       </body>
     </html>
   );
